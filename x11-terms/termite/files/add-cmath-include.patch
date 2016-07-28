@@ -1,0 +1,12 @@
+diff --git a/termite.cc b/termite.cc
+index ac1140f..e78d427 100644
+--- a/termite.cc
++++ b/termite.cc
+@@ -20,6 +20,7 @@
+ #include <array>
+ #include <cstdlib>
+ #include <cstring>
++#include <cmath>
+ #include <functional>
+ #include <limits>
+ #include <map>

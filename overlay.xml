@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+        <repo priority="50" status="unofficial">
+                <name>embik-gentoo-overlay</name>
+                <description>personal overlay for packages missing from Gentoo</description>
+                <homepage>https://github.com/embik/gentoo-overlay</homepage>
+                <owner>
+                        <mail>mail@embik.me</mail>
+                        <name>Marvin Beckers</name>
+                </owner>
+                <source type="git">git://github.com/embik/gentoo-overlay.git</source>
+                <feed>https://github.com/embik/gentoo-overlay/commit/master.atom</feed>
+        </repo>
+</repositories>

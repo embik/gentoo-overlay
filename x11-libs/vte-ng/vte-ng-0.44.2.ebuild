@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 	vala? ( $(vala_depend) )
 "
 RDEPEND="${RDEPEND}
-	!x11-libs/vte:2.90[glade]
+	!x11-libs/vte
 "
 
 src_prepare() {

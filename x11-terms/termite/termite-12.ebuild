@@ -7,10 +7,11 @@ inherit eutils toolchain-funcs versionator git-r3
 
 DESCRIPTION="A keyboard-centric VTE-based terminal"
 HOMEPAGE="https://github.com/thestinger/termite"
-SRC_URI="https://github.com/thestinger/${PN}/archive/v${PV}.tar.gz -> termite-v${PV}.tar.gz"
 
-S="${WORKDIR}/termite-v${PV}"
-
+EGIT_REPO_URI="git://github.com/thestinger/termite.git"
+if [[ ${PV} != 999? ]]; then
+	EGIT_COMMIT=v${PV}
+fi
 
 LICENSE="LGPL-2+ MIT"
 SLOT="0"
@@ -27,7 +28,7 @@ HDEPEND=""
 
 LIBDEPEND="
 	>=x11-libs/gtk+-3.0
-	>=x11-libs/vte-ng-0.46.0
+	>=x11-libs/vte-ng-0.38.1
 "
 
 DEPEND="${LIBDEPEND}"
@@ -47,7 +48,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/add-cmath-include.patch"
 	epatch "${FILESDIR}/add-decorated-config-option-to-disable-csd.patch"
 }
 

@@ -22,6 +22,7 @@ RDEPEND="
 	>=dev-libs/glib-2.40:2
 	>=x11-libs/gtk+-3.8:3[introspection?]
 	>=x11-libs/pango-1.22.0
+	>=dev-libs/libpcre2-8.0
 
 	sys-libs/ncurses:0=
 	sys-libs/zlib

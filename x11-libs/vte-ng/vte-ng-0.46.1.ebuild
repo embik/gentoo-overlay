@@ -49,6 +49,7 @@ RDEPEND="${RDEPEND}
 src_prepare() {
 	use vala && vala_src_prepare
 
+	epatch "${FILESDIR}/${P}-01-fix-type-errors.patch"
 	# build fails because of -Werror with gcc-5.x
 	#sed -e 's#-Werror=format=2#-Wformat=2#' -i configure || die "sed failed"
 

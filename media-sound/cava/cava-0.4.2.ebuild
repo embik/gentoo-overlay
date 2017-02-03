@@ -33,7 +33,7 @@ pkg_setup() {
 src_configure() {
 	./autogen.sh
 	# Build with support for 'legacy' dev-libs/iniparser (< 4.0)
-	./configure --enable-legacy_iniparser
+	./configure --prefix=/usr --enable-legacy_iniparser
 }
 
 src_compile() {

@@ -25,7 +25,6 @@ RDEPEND=">=dev-qt/qtwidgets-5.4.0
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	#TODO: put API Key into clientId.h
 	if [[ -z "$L2P_API_KEY" ]]; then
 		sed -i -e 's/"INSERT YOUR CLIENT ID HERE"/"$L2P_API_KEY"/' ./clientId.h || die "Adding L2P API key failed!"
 		sed -i '/"#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED"/g' ./clientId.h
@@ -39,5 +38,5 @@ src_prepare() {
 }
 
 src_compile() {
-	eqmake5
+	eqmake5 -o Makefile "target.path=/usr/bin; INSTALLS += target" Sync-my-L2P.pro
 }

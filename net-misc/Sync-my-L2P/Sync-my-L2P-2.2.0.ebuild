@@ -34,6 +34,8 @@ src_prepare() {
 		eeror "Add L2P_API_KEY to the ebuild's environment via package.env"
 		die
 	fi
+
+	eapply_user
 }
 
 src_install() {

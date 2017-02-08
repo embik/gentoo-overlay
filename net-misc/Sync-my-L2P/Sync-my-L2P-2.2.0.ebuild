@@ -38,6 +38,6 @@ src_prepare() {
 	eapply_user
 }
 
-src_install() {
+src_compile() {
 	eqmake5
 }

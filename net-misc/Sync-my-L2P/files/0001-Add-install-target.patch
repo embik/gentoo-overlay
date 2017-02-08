@@ -1,0 +1,23 @@
+From 988c2bb1648e4f3f0371cd05dd2b4d7e8af59d2a Mon Sep 17 00:00:00 2001
+From: Marvin Beckers <mail@embik.me>
+Date: Wed, 8 Feb 2017 22:51:40 +0100
+Subject: [PATCH] Add install target
+
+---
+ Sync-my-L2P.pro | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/Sync-my-L2P.pro b/Sync-my-L2P.pro
+index 3f151d4..1006516 100644
+--- a/Sync-my-L2P.pro
++++ b/Sync-my-L2P.pro
+@@ -86,3 +86,6 @@ RESOURCES += \
+     lang\translation.qrc
+ 
+ RC_FILE = icon.rc
++
++target.path = /usr/bin
++INSTALLS += target
+-- 
+2.11.1
+

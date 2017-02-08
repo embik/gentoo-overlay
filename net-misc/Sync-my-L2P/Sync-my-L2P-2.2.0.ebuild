@@ -25,6 +25,8 @@ RDEPEND=">=dev-qt/qtwidgets-5.4.0
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}/0001-Add-install-target.patch"
+
 	if [[ -z "$L2P_API_KEY" ]]; then
 		sed -i -e 's/"INSERT YOUR CLIENT ID HERE"/"$L2P_API_KEY"/' ./clientId.h || die "Adding L2P API key failed!"
 		sed -i '/"#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED"/g' ./clientId.h

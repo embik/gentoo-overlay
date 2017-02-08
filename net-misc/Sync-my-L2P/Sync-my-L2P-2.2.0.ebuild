@@ -40,5 +40,5 @@ src_prepare() {
 }
 
 src_compile() {
-	eqmake5 -o Makefile "target.path=/usr/bin; INSTALLS += target" Sync-my-L2P.pro
+	eqmake5
 }

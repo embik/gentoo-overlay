@@ -29,7 +29,7 @@ src_prepare() {
 
 	if [[ -z "$L2P_API_KEY" ]]; then
 		sed -i -e "s/INSERT YOUR CLIENT ID HERE/$L2P_API_KEY/" ./clientId.h || die "Adding L2P API key failed!"
-		sed -i -e '/"#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED"/g' ./clientId.h
+		sed -i -e "/#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED/g" ./clientId.h
 	else
 		eeror "L2P API Key not found."
 		eeror "Add L2P_API_KEY to the ebuild's environment via package.env"

@@ -28,8 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}/0001-Add-install-target.patch"
 
 	if [[ -z "$L2P_API_KEY" ]]; then
-		sed -i -e 's/"INSERT YOUR CLIENT ID HERE"/"$L2P_API_KEY"/' ./clientId.h || die "Adding L2P API key failed!"
-		sed -i '/"#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED"/g' ./clientId.h
+		sed -i -e "s/INSERT YOUR CLIENT ID HERE/$L2P_API_KEY/" ./clientId.h || die "Adding L2P API key failed!"
+		sed -i -e '/"#error ERROR: NO CLIENTID IN CLIENTID.H DEFINED"/g' ./clientId.h
 	else
 		eeror "L2P API Key not found."
 		eeror "Add L2P_API_KEY to the ebuild's environment via package.env"

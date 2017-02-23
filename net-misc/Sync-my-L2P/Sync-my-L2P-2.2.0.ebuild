@@ -12,7 +12,7 @@ SRC_URI="https://github.com/Sync-my-L2P/Sync-my-L2P/archive/v${PV}.tar.gz -> ${P
 
 LICENSE="LGPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-amd64 -x86"
 IUSE=""
 
 RDEPEND=">=dev-qt/qtwidgets-5.4.0

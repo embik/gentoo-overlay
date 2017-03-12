@@ -8,6 +8,6 @@
                         <mail>mail@embik.me</mail>
                         <name>Marvin Beckers</name>
                 </owner>
-                <source type="git">git://git.embik.me/embik/gentoo-overlay.git</source>
+                <source type="git">https://git.embik.me/embik/gentoo-overlay.git</source>
         </repo>
 </repositories>

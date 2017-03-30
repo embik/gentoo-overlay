@@ -1,8 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 PYTHON_COMPAT=(python2_7)
 
 inherit user eutils systemd distutils-r1
@@ -13,7 +12,7 @@ SRC_URI="mirror://pypi/M/Mopidy/Mopidy-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="dev-python/pykka[${PYTHON_USEDEP}]
@@ -34,7 +33,6 @@ S=${WORKDIR}/Mopidy-${PV}
 pkg_setup() {
 	enewgroup mopidy
 	enewuser mopidy -1 -1 "/etc/mopidy" mopidy
-	distutils-r1_pkg_setup
 }
 
 src_install() {

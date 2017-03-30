@@ -1,8 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 PYTHON_COMPAT=(python2_7)
 
 inherit eutils distutils-r1
@@ -23,10 +22,6 @@ DEPEND="test? ( ${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/pyspotify-${PV}
-
-pkg_setup() {
-	distutils-r1_pkg_setup
-}
 
 src_install() {
 	distutils-r1_src_install

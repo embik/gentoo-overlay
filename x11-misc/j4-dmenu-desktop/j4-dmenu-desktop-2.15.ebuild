@@ -1,19 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
-inherit git-2 cmake-utils
+inherit cmake-utils
 
 DESCRIPTION="A rewrite of i3-dmenu-desktop, which is much faster"
 HOMEPAGE="https://github.com/enkore/j4-dmenu-desktop"
-EGIT_REPO_URI="git://github.com/enkore/j4-dmenu-desktop.git"
+SRC_URI="https://github.com/enkore/${PN}/archive/r${PV}.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE=""
+
+S="${WORKDIR}/${PN}-r${PV}"
 
 DEPEND=""
 RDEPEND="${DEPEND}

@@ -20,6 +20,7 @@ IUSE="test"
 
 RDEPEND="media-sound/mopidy[${PYTHON_USEDEP}]
 	media-sound/mopidy-local-images[${PYTHON_USEDEP}]
+	dev-python/spotipy[${PYTHON_USEDEP}]
 	dev-python/python-spotify[${PYTHON_USEDEP}]
 	dev-python/pylast[${PYTHON_USEDEP}]
 	dev-python/configobj[${PYTHON_USEDEP}]"

@@ -53,7 +53,7 @@ src_configure() {
 
 		-DCMAKE_INSTALL_SYSCONFDIR="/etc"
 		-DLD_LIBRARY_PATH="${EPREFIX}/usr/lib"
-		-DGIT_COMMIT_HASH="${PVR}" # specify version info, may change in future
+		-DVERSION="${PVR}"
 	)
 
 	cmake-utils_src_configure

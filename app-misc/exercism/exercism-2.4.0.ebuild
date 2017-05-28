@@ -13,14 +13,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/cli-${PV}"
+_DEST="${WORKDIR}/src/github.com/exercism/"
 
 DEPEND=">=dev-lang/go-1.6.0"
 RDEPEND=""
 
 src_compile() {
-	go build -o out/exercism exercism/main.go
+	mkdir -p ${_DEST}
+
+	ln -s ${WORKDIR}/cli-${PV} ${_DEST}/cli
+	GOPATH=${WORKDIR} go install github.com/exercism/cli/exercism
 }
 
 src_install() {
-	dobin out/exercism
+	dobin bin/exercism
+	dodoc cli-${PV}/LICENSE
+	dodoc cli-${PV}/README.md
 }

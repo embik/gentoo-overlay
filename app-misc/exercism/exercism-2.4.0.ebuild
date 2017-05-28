@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/cli-${PV}"
-_DEST="${WORKDIR}/src/github.com/exercism/"
+_DEST="${WORKDIR}/src/github.com/exercism"
 
 DEPEND=">=dev-lang/go-1.6.0"
 RDEPEND=""
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin bin/exercism
-	dodoc cli-${PV}/LICENSE
-	dodoc cli-${PV}/README.md
+	dobin ${WORKDIR}/bin/exercism
+	dodoc ${WORKDIR}/cli-${PV}/LICENSE
+	dodoc ${WORKDIR}/cli-${PV}/README.md
 }

@@ -3,11 +3,11 @@
         <repo priority="50" status="unofficial">
                 <name>embik-gentoo-overlay</name>
                 <description>personal overlay for packages missing from Gentoo</description>
-                <homepage>https://git.embik.me/embik/gentoo-overlay</homepage>
+                <homepage>https://github.com/embik/gentoo-overlay</homepage>
                 <owner>
                         <mail>mail@embik.me</mail>
                         <name>Marvin Beckers</name>
                 </owner>
-                <source type="git">https://git.embik.me/embik/gentoo-overlay.git</source>
+                <source type="git">https://github.com/embik/gentoo-overlay.git</source>
         </repo>
 </repositories>
